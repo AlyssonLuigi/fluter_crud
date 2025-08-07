@@ -1,5 +1,6 @@
 import 'package:fluter_crud/components/user_tile.dart';
 import 'package:fluter_crud/provider/users.dart';
+import 'package:fluter_crud/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,8 +16,12 @@ class UserList extends StatelessWidget {
         title: const Text('Lista de Usuários'),
         actions: [
           IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.add),
+            onPressed: () {
+              Navigator.of(context).pushNamed(
+                AppRoutes.USER_FORM
+              );
+            },
+            icon: Icon(Icons.add),
           )
         ],
       ),
